@@ -26,7 +26,7 @@ const greeting = {
     "A tech builder pursuing IDD in Computer Science & AI at RGIPT. I transform complex challenges into robust, scalable solutions—from competitive coding to architecting full-stack applications and exploring AI. With strong analytical skills and a passion for innovation, I turn ideas into reality."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1US0j7wKBahMl9kEKOVeQbteKm9a96Ql2/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1zcR_a30BCCdHkz77Uz0siAzvyfgJIecv/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -314,9 +314,9 @@ const bigProjects = {
         {label: "Candles Backtested", value: "50K+"},
       ],
       footerLink: [
-        {name: "GitHub", url: "https://github.com/jarvisxys/Gyaanmunch"},
+        {name: "GitHub", url: "https://github.com/jarvisxys/apex-bot"},
         // Uncomment when deployed:
-        {name: "Live Demo", url: "https://gyaanmunch.vercel.app/"},
+        // {name: "Live Demo", url: "https://apex-bot.com/"},
       ],
     },
     {
