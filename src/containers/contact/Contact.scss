@@ -1,87 +1,289 @@
 @import "../../_globalColor";
 
-.contact-div-main {
+/* ═══════════════════════════════════════════════════════════════
+   SECTION
+═══════════════════════════════════════════════════════════════ */
+.contact-section {
   display: flex;
+  align-items: flex-start;       /* top-align so form doesn't stretch right col */
+  justify-content: space-between;
+  gap: 80px;
+  padding: 60px 0 80px;
 }
 
-.dark-mode a {
-  color: $textColorDark;
-}
-
-.contact-div-main > * {
+/* ═══════════════════════════════════════════════════════════════
+   LEFT
+═══════════════════════════════════════════════════════════════ */
+.contact-left {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* cap so form doesn't bleed to the right panel */
+  max-width: 560px;
 }
 
-.contact-title {
-  font-size: 65px;
+/* ── BIG heading — "Reach Out to me!" scale ──────────────────
+   Same 56px / font-weight 400 used across the whole portfolio  */
+.contact-heading {
+  font-size: 56px;
   font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 14px;
+  color: $titleColor;
+
+  &.dark-mode { color: $textColorDark; }
 }
 
-.contact-detail,
-.contact-detail-email {
-  margin-top: 20px;
-  font-size: 40px;
+/* ── Subtitle — uppercase small-caps style like other sections ── */
+.contact-sub {
+  font-size: 14px;
   font-weight: 400;
-  color: $subTitle;
-  text-decoration: none;
-}
-
-.contact-detail:hover,
-.contact-detail-email:hover {
-  color: $textColor;
-  text-shadow: 2px 1px 2px $contactDetailHoverTS;
-  transition: all 0.3s;
-}
-
-.contact-subtitle {
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+  color: $subTitle;
+  margin: 0 0 26px;
+
+  &.dark-mode { color: rgba(255, 255, 255, 0.45); }
 }
 
-.contact-text-div {
-  margin-top: 1.5rem;
+/* ── Info rows ────────────────────────────────────────────── */
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.contact-margin-top {
-  margin-top: 4rem;
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 16px;          /* larger — clearly readable */
+  color: $subTitle;
+
+  svg {
+    flex-shrink: 0;
+    color: $buttonColor;
+    opacity: 0.8;
+  }
+
+  &.dark-mode {
+    color: rgba(255, 255, 255, 0.55);
+    svg { color: #818cf8; opacity: 1; }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 400;         /* NOT bold */
+    border-bottom: 1px solid transparent;
+    transition: color 0.18s, border-color 0.18s;
+    &:hover { color: $buttonColor; border-color: $buttonColor; }
+  }
+
+  &.dark-mode &__link:hover { color: #818cf8; border-color: #818cf8; }
 }
 
-.contact-image-div > img {
-  max-width: 100%;
-  height: auto;
-  margin-left: 1.5rem;
-  margin-top: -4rem;
+.hire-yes { color: #22c55e; font-weight: 700; }
+.hire-no  { color: #ef4444; font-weight: 700; }
+
+/* ═══════════════════════════════════════════════════════════════
+   FORM  — fixed width, compact, not full-viewport-width
+═══════════════════════════════════════════════════════════════ */
+.cfb {
+  margin-top: 24px;
+  width: 100%;
+  max-width: 480px;          /* ← keeps inputs from stretching awkwardly */
+  display: flex;
+  flex-direction: column;
 }
 
-/* Media Query */
-@media (max-width: 1380px), (max-width: 768px) {
-  .contact-title {
-    font-size: 56px;
-    font-weight: 400;
-    text-align: center;
+.cfb-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+/* name + email side by side inside the 480px box */
+.cfb-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  @media (max-width: 520px) { grid-template-columns: 1fr; }
+}
+
+/* ── LIGHT input ──────────────────────────────────────────── */
+.cfb-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
+
+  background: #f3f4f6;
+  border: 1.5px solid #e5e7eb;
+  color: #111827;
+
+  &::placeholder {
+    color: #9ca3af;
+    font-style: italic;
+    font-size: 13px;
   }
 
-  .contact-title {
-    font-size: 40px;
-    text-align: center;
+  &:focus {
+    background: #fff;
+    border-color: $buttonColor;
+    box-shadow: 0 0 0 3px rgba(55, 0, 179, 0.08);
+  }
+}
+
+/* ── DARK input ───────────────────────────────────────────── */
+.cfb-input--dark {
+  background: #1e2533;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+
+  &::placeholder { color: #4b5563; }
+
+  &:focus {
+    background: #212b3d;
+    border-color: $buttonColor;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+  }
+}
+
+/* message box — compact height */
+.cfb-textarea {
+  resize: none;
+  min-height: 110px;         /* shorter than before */
+  line-height: 1.65;
+}
+
+/* ── Send button ──────────────────────────────────────────── */
+.cfb-btn {
+  align-self: flex-start;
+  padding: 11px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #fff;
+  background: $buttonColor;
+  border: 1.5px solid $buttonColor;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition: background 0.18s, transform 0.15s;
+
+  &:hover:not(:disabled) {
+    background: darken($buttonColor, 8%);
+    transform: translateY(-1px);
   }
 
-  .contact-subtitle {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
+  &:disabled { opacity: 0.4; cursor: not-allowed; }
+}
+
+.cfb-ok {
+  margin: 10px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RIGHT — floating avatar + signature
+═══════════════════════════════════════════════════════════════ */
+.contact-right {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  /* vertically centered with the left column */
+  align-self: center;
+}
+
+.contact-avatar-ring {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, $buttonColor 0%, #818cf8 100%);
+  box-shadow: 0 8px 40px rgba(55, 0, 179, 0.28);
+  flex-shrink: 0;
+  animation: avatarFloat 5s ease-in-out infinite;
+}
+
+@keyframes avatarFloat {
+  0%, 100% { transform: translateY(0);    }
+  50%       { transform: translateY(-9px); }
+}
+
+.contact-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border: 4px solid #fff;
+}
+
+/* ── Signature image below the photo ─────────────────────────
+   The cursive "< Aditya Kumar />" logo from the loading screen.
+   Add signatureImage: require("./assets/images/logo.png")
+   (or the correct path) to contactInfo in portfolio.js         */
+.contact-signature {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Fallback role text (shown when signatureImage is not set) */
+.contact-avatar-role {
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+  color: $subTitle;
+
+  &.dark-mode { color: rgba(255, 255, 255, 0.45); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1380px) {
+  .contact-heading     { font-size: 45px; }
+  .contact-avatar-ring { width: 240px; height: 240px; }
+}
+
+@media (max-width: 900px) {
+  .contact-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 36px;
+    padding: 40px 0 60px;
   }
 
-  .contact-text-div {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-
-  .contact-detail,
-  .contact-detail-email {
-    font-size: 20px;
-  }
-
-  .contact-image-div {
-    display: none;
-  }
+  .contact-left        { align-items: center; max-width: 100%; }
+  .contact-heading     { font-size: 36px; text-align: center; }
+  .contact-sub         { text-align: center; }
+  .contact-info-block  { width: 100%; }
+  .contact-row         { justify-content: center; }
+  .cfb                 { max-width: 100%; }
+  .cfb-btn             { align-self: stretch; text-align: center; }
+  .contact-avatar-ring { width: 190px; height: 190px; }
+  .contact-signature   { width: 160px; }
 }
