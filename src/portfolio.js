@@ -120,38 +120,45 @@ const socialMediaLinks = {
 //   display: true // Set false to hide this section, defaults to true
 // };
 
-
 const skillsSection = {
   title: "What I do",
   subTitle: "BUILDING WITH AI, FULL‑STACK, AND COMPETITIVE PROGRAMMING EDGE",
   skills: [
-  <span key="1"><strong>Academic Excellence</strong> – CGPA: <strong>8.95 / 10</strong> · JEE Advanced <strong>top 10%</strong></span>,
-  <span key="2"><strong>Competitive Programming</strong> – CodeChef <strong>3‑star</strong> (peak rating <strong>1600+</strong>)</span>,
-  <span key="3"><strong>Data Structures & Algorithms</strong> – <strong>300+</strong> problems solved across platforms · Strong analytical foundation</span>
+    <span key="1">
+      <strong>Academic Excellence</strong> – CGPA: <strong>8.95 / 10</strong> ·
+      JEE Advanced <strong>top 10%</strong>
+    </span>,
+    <span key="2">
+      <strong>Competitive Programming</strong> – CodeChef{" "}
+      <strong>3‑star</strong> (peak rating <strong>1600+</strong>)
+    </span>,
+    <span key="3">
+      <strong>Data Structures & Algorithms</strong> – <strong>300+</strong>{" "}
+      problems solved across platforms · Strong analytical foundation
+    </span>
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
      https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
-    { skillName: "C++", fontAwesomeClassname: "fas fa-code" },
-    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
-    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
-    { skillName: "React", fontAwesomeClassname: "fab fa-react" },
-    { skillName: "Next.js", fontAwesomeClassname: "fab fa-react" }, // Next.js often uses same icon
-    { skillName: "Node.js", fontAwesomeClassname: "fab fa-node" },
-    { skillName: "FastAPI", fontAwesomeClassname: "fas fa-bolt" }, // Lightning bolt for API
-    { skillName: "TensorFlow", fontAwesomeClassname: "fab fa-tensorflow" },
-    { skillName: "Docker", fontAwesomeClassname: "fab fa-docker" },
-    { skillName: "SQL", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "Git", fontAwesomeClassname: "fab fa-git-alt" },
-    { skillName: "AWS", fontAwesomeClassname: "fab fa-aws" },
-    { skillName: "Firebase", fontAwesomeClassname: "fas fa-fire" }
+    {skillName: "C++", fontAwesomeClassname: "fas fa-code"},
+    {skillName: "Python", fontAwesomeClassname: "fab fa-python"},
+    {skillName: "JavaScript", fontAwesomeClassname: "fab fa-js"},
+    {skillName: "React", fontAwesomeClassname: "fab fa-react"},
+    {skillName: "Next.js", fontAwesomeClassname: "fab fa-react"}, // Next.js often uses same icon
+    {skillName: "Node.js", fontAwesomeClassname: "fab fa-node"},
+    {skillName: "FastAPI", fontAwesomeClassname: "fas fa-bolt"}, // Lightning bolt for API
+    {skillName: "TensorFlow", fontAwesomeClassname: "fab fa-tensorflow"},
+    {skillName: "Docker", fontAwesomeClassname: "fab fa-docker"},
+    {skillName: "SQL", fontAwesomeClassname: "fas fa-database"},
+    {skillName: "Git", fontAwesomeClassname: "fab fa-git-alt"},
+    {skillName: "AWS", fontAwesomeClassname: "fab fa-aws"},
+    {skillName: "Firebase", fontAwesomeClassname: "fas fa-fire"}
   ],
 
   display: true // Set false to hide this section, defaults to true
 };
-
 
 // Education Section
 
@@ -180,14 +187,14 @@ const skillsSection = {
 //   ]
 // };
 
-
 const educationInfo = {
   display: true,
   schools: [
     {
       schoolName: "Rajiv Gandhi Institute of Petroleum Technology",
       logo: require("./assets/images/RGIPTLogo.jpeg"), // Replace with actual logo file
-      subHeader: "Integrated Dual Degree (IDD) in Computer Science and Artificial Intelligence",
+      subHeader:
+        "Integrated Dual Degree (IDD) in Computer Science and Artificial Intelligence",
       duration: "August 2023 – Present (Expected 2028)",
       desc: "CGPA: 8.95 / 10",
       descBullets: [
@@ -201,7 +208,7 @@ const educationInfo = {
       logo: require("./assets/images/ADARSHLogo.jpg"), // Replace with actual logo file
       subHeader: "Class XII - CBSE Board",
       duration: "2022",
-      desc:"Scored 84% in CBSE Class XII Board Examination.",
+      desc: "Scored 84% in CBSE Class XII Board Examination."
       // descBullets: [
       //   "Secured 95% in CBSE examinations",
       //   "Strong foundation in Physics, Chemistry, and Mathematics"
@@ -212,14 +219,13 @@ const educationInfo = {
       logo: require("./assets/images/kvs-logo.png"), // Replace with actual logo file
       subHeader: "Class X - CBSE Board",
       duration: "2020",
-      desc: "Scored 95% in CBSE Class X Board Examination.",
+      desc: "Scored 95% in CBSE Class X Board Examination."
       // descBullets: [
       //   "Achieved 84% in CBSE examinations"
       // ]
     }
   ]
 };
-
 
 // Your top 3 proficient stacks/tech experience
 
@@ -296,7 +302,16 @@ const bigProjects = {
       projectName: "APEX – Autonomous Crypto Trading System",
       projectDesc:
         "End-to-end algorithmic trading platform with 6 strategies, 12 risk controls, and a live Flask dashboard.",
-      techStack: ["Python 3.11", "asyncio", "aiohttp", "WebSockets", "SQLite", "Flask", "NumPy", "pandas"],
+      techStack: [
+        "Python 3.11",
+        "asyncio",
+        "aiohttp",
+        "WebSockets",
+        "SQLite",
+        "Flask",
+        "NumPy",
+        "pandas"
+      ],
       highlights: [
         "Sub-100ms WebSocket feed for 3 symbols × 3 timeframes simultaneously",
         "6 strategies: EMA Crossover, RSI Mean Reversion, Breakout Momentum, VWAP Reversion, Scalp Oscillator, Trend Pullback",
@@ -305,19 +320,19 @@ const bigProjects = {
         "Backtested across 50,000 candles (180 days) of real Binance OHLCV data per symbol",
         "Walk-forward & Monte Carlo validation to verify edge consistency across market regimes",
         "Diagnosed & fixed 3 critical bugs via forensic analysis — eliminated artificial -30% loss floor",
-        "14 technical indicators (EMA, MACD, RSI, Bollinger Bands, VWAP, ATR, ADX, StochRSI) built from scratch",
+        "14 technical indicators (EMA, MACD, RSI, Bollinger Bands, VWAP, ATR, ADX, StochRSI) built from scratch"
       ],
       stats: [
         {label: "Lines of Code", value: "~5,400"},
         {label: "Trading Strategies", value: "6"},
         {label: "Risk Controls", value: "12"},
-        {label: "Candles Backtested", value: "50K+"},
+        {label: "Candles Backtested", value: "50K+"}
       ],
       footerLink: [
-        {name: "GitHub", url: "https://github.com/jarvisxys/apex-bot"},
+        {name: "GitHub", url: "https://github.com/jarvisxys/apex-bot"}
         // Uncomment when deployed:
         // {name: "Live Demo", url: "https://apex-bot.com/"},
-      ],
+      ]
     },
     {
       featured: false,
@@ -331,12 +346,12 @@ const bigProjects = {
         "Multi-input flow: document upload, text paste, topic selection, and image upload",
         "Content-analysis pipeline extracts key concepts and auto-generates MCQs with distractors",
         "Quiz config: time limits, attempt restrictions, passing scores, customizable themes",
-        "Sharing features with direct links and QR codes for easy distribution",
+        "Sharing features with direct links and QR codes for easy distribution"
       ],
       footerLink: [
         {name: "GitHub", url: "https://github.com/jarvisxys/Gyaanmunch"},
-        {name: "Live Demo", url: "https://gyaanmunch.vercel.app/"},
-      ],
+        {name: "Live Demo", url: "https://gyaanmunch.vercel.app/"}
+      ]
     },
     {
       featured: false,
@@ -345,20 +360,27 @@ const bigProjects = {
       tagline: "Smart Farming Assistant",
       projectDesc:
         "AI farm assistant with plant disease detection (38 classes), weed classification, and tree crown counting.",
-      techStack: ["Next.js (PWA)", "FastAPI", "TensorFlow", "MobileNetV2", "Tailwind CSS", "Docker"],
+      techStack: [
+        "Next.js (PWA)",
+        "FastAPI",
+        "TensorFlow",
+        "MobileNetV2",
+        "Tailwind CSS",
+        "Docker"
+      ],
       highlights: [
         "Trained on 54K+ PlantVillage images; lightweight offline-ready models",
         "Detects 38 disease classes across multiple crop species",
         "Containerized FastAPI inference API optimized for low-latency predictions",
-        "Progressive Web App — works offline in low-connectivity agricultural environments",
+        "Progressive Web App — works offline in low-connectivity agricultural environments"
       ],
       footerLink: [
         {name: "GitHub", url: "https://github.com/jarvisxys/Plantae-AI"},
-        {name: "Live Demo", url: "https://plantae-ai.vercel.app/"},
-      ],
-    },
+        {name: "Live Demo", url: "https://plantae-ai.vercel.app/"}
+      ]
+    }
   ],
-  display: true,
+  display: true
 };
 
 const researchPapers = {
@@ -383,28 +405,30 @@ const researchPapers = {
         "Graph-based network: each intersection controlled by an independent DRL agent sharing state with neighbors",
         "Validated on SUMO simulator — 40% two-wheelers, lane-splitting modeled",
         "Up to 26% reduction in average queue length vs. fixed-time control",
-        "14% reduction in average waiting time vs. state-of-the-art MARDDPG baseline",
+        "14% reduction in average waiting time vs. state-of-the-art MARDDPG baseline"
       ],
       stats: [
         {label: "Queue Reduction", value: "26%"},
         {label: "Wait Time Reduction", value: "14%"},
         {label: "Intersections", value: "6"},
-        {label: "Episodes", value: "2,000"},
+        {label: "Episodes", value: "2,000"}
       ],
-      tags: ["Multi-Agent RL", "Deep RL", "Traffic Signal Control", "LSTM", "SUMO"],
+      tags: [
+        "Multi-Agent RL",
+        "Deep RL",
+        "Traffic Signal Control",
+        "LSTM",
+        "SUMO"
+      ],
       // ← Add your Google Drive / arXiv PDF link here:
-      pdfLink: "https://drive.google.com/file/d/1RGFZkScsaQ8285BzZ5Uaz-eD3zeGTcoX/view?usp=drive_link",
-    },
-  ],
+      pdfLink:
+        "https://drive.google.com/file/d/1RGFZkScsaQ8285BzZ5Uaz-eD3zeGTcoX/view?usp=drive_link"
+    }
+  ]
 };
-
-
-
-
 
 // Achievement Section
 // Include certificates, talks etc
-
 
 const achievementSection = {
   title: emoji("Achievements & Recognitions 🏆"),
@@ -456,7 +480,7 @@ const achievementSection = {
       title: "Python Course",
       image: require("./assets/images/Python.png"), // ← replace
       tag: "Programming"
-    },
+    }
     // {
     //   title: "Certificate Title 2",
     //   image: require("./assets/images/RGIPTLogo.jpeg"), // ← replace
@@ -472,7 +496,6 @@ const achievementSection = {
 
   display: true
 };
-
 
 // Blogs Section
 
@@ -543,18 +566,18 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Open to new opportunities — actively applying to top firms including JPMorgan Chase. Got a project or an opening? My inbox is always open.",
- 
+
   number: "+91-7201006080",
   email_address: "adisingh8071@gmail.com",
- 
+
   // Your photo — put it at src/assets/images/profile.jpg
   // and update the path below. This is the image that appears
   // in the circular ring on the right side of the contact section.
   profileImage: require("./assets/images/Adi.png"),
   profileName: "Aditya Kumar",
   profileRole: "IDD CS & AI · RGIPT",
- 
-  isHireable: true,
+
+  isHireable: true
 };
 
 // Twitter Section

@@ -18,15 +18,15 @@ import {
 
 function Header() {
   const {isDark} = useContext(StyleContext);
-  const viewExperience  = workExperiences.display;
-  const viewOpenSource  = openSource.display;
-  const viewSkills      = skillsSection.display;
+  const viewExperience = workExperiences.display;
+  const viewOpenSource = openSource.display;
+  const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
-  const viewBlog        = blogSection.display;
-  const viewTalks       = talkSection.display;
-  const viewResume      = resumeSection.display;
-  const viewEducation   = educationInfo.display;
-  const viewProjects    = bigProjects.display;
+  const viewBlog = blogSection.display;
+  const viewTalks = talkSection.display;
+  const viewResume = resumeSection.display;
+  const viewEducation = educationInfo.display;
+  const viewProjects = bigProjects.display;
 
   return (
     <Headroom>

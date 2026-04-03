@@ -5,7 +5,7 @@
 ═══════════════════════════════════════════════════════════════ */
 .contact-section {
   display: flex;
-  align-items: flex-start;       /* top-align so form doesn't stretch right col */
+  align-items: flex-start; /* top-align so form doesn't stretch right col */
   justify-content: space-between;
   gap: 80px;
   padding: 60px 0 80px;
@@ -32,7 +32,9 @@
   margin: 0 0 14px;
   color: $titleColor;
 
-  &.dark-mode { color: $textColorDark; }
+  &.dark-mode {
+    color: $textColorDark;
+  }
 }
 
 /* ── Subtitle — uppercase small-caps style like other sections ── */
@@ -45,7 +47,9 @@
   color: $subTitle;
   margin: 0 0 26px;
 
-  &.dark-mode { color: rgba(255, 255, 255, 0.45); }
+  &.dark-mode {
+    color: rgba(255, 255, 255, 0.45);
+  }
 }
 
 /* ── Info rows ────────────────────────────────────────────── */
@@ -60,7 +64,7 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 16px;          /* larger — clearly readable */
+  font-size: 16px; /* larger — clearly readable */
   color: $subTitle;
 
   svg {
@@ -71,23 +75,38 @@
 
   &.dark-mode {
     color: rgba(255, 255, 255, 0.55);
-    svg { color: #818cf8; opacity: 1; }
+    svg {
+      color: #818cf8;
+      opacity: 1;
+    }
   }
 
   &__link {
     color: inherit;
     text-decoration: none;
-    font-weight: 400;         /* NOT bold */
+    font-weight: 400; /* NOT bold */
     border-bottom: 1px solid transparent;
     transition: color 0.18s, border-color 0.18s;
-    &:hover { color: $buttonColor; border-color: $buttonColor; }
+    &:hover {
+      color: $buttonColor;
+      border-color: $buttonColor;
+    }
   }
 
-  &.dark-mode &__link:hover { color: #818cf8; border-color: #818cf8; }
+  &.dark-mode &__link:hover {
+    color: #818cf8;
+    border-color: #818cf8;
+  }
 }
 
-.hire-yes { color: #22c55e; font-weight: 700; }
-.hire-no  { color: #ef4444; font-weight: 700; }
+.hire-yes {
+  color: #22c55e;
+  font-weight: 700;
+}
+.hire-no {
+  color: #ef4444;
+  font-weight: 700;
+}
 
 /* ═══════════════════════════════════════════════════════════════
    FORM  — fixed width, compact, not full-viewport-width
@@ -95,7 +114,7 @@
 .cfb {
   margin-top: 24px;
   width: 100%;
-  max-width: 480px;          /* ← keeps inputs from stretching awkwardly */
+  max-width: 480px; /* ← keeps inputs from stretching awkwardly */
   display: flex;
   flex-direction: column;
 }
@@ -113,7 +132,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 
-  @media (max-width: 520px) { grid-template-columns: 1fr; }
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── LIGHT input ──────────────────────────────────────────── */
@@ -150,7 +171,9 @@
   border: 1.5px solid rgba(255, 255, 255, 0.08);
   color: #e5e7eb;
 
-  &::placeholder { color: #4b5563; }
+  &::placeholder {
+    color: #4b5563;
+  }
 
   &:focus {
     background: #212b3d;
@@ -162,7 +185,7 @@
 /* message box — compact height */
 .cfb-textarea {
   resize: none;
-  min-height: 110px;         /* shorter than before */
+  min-height: 110px; /* shorter than before */
   line-height: 1.65;
 }
 
@@ -186,7 +209,10 @@
     transform: translateY(-1px);
   }
 
-  &:disabled { opacity: 0.4; cursor: not-allowed; }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 }
 
 .cfb-ok {
@@ -221,8 +247,13 @@
 }
 
 @keyframes avatarFloat {
-  0%, 100% { transform: translateY(0);    }
-  50%       { transform: translateY(-9px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
 }
 
 .contact-avatar {
@@ -258,15 +289,22 @@
   text-align: center;
   color: $subTitle;
 
-  &.dark-mode { color: rgba(255, 255, 255, 0.45); }
+  &.dark-mode {
+    color: rgba(255, 255, 255, 0.45);
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1380px) {
-  .contact-heading     { font-size: 45px; }
-  .contact-avatar-ring { width: 240px; height: 240px; }
+  .contact-heading {
+    font-size: 45px;
+  }
+  .contact-avatar-ring {
+    width: 240px;
+    height: 240px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -277,13 +315,35 @@
     padding: 40px 0 60px;
   }
 
-  .contact-left        { align-items: center; max-width: 100%; }
-  .contact-heading     { font-size: 36px; text-align: center; }
-  .contact-sub         { text-align: center; }
-  .contact-info-block  { width: 100%; }
-  .contact-row         { justify-content: center; }
-  .cfb                 { max-width: 100%; }
-  .cfb-btn             { align-self: stretch; text-align: center; }
-  .contact-avatar-ring { width: 190px; height: 190px; }
-  .contact-signature   { width: 160px; }
+  .contact-left {
+    align-items: center;
+    max-width: 100%;
+  }
+  .contact-heading {
+    font-size: 36px;
+    text-align: center;
+  }
+  .contact-sub {
+    text-align: center;
+  }
+  .contact-info-block {
+    width: 100%;
+  }
+  .contact-row {
+    justify-content: center;
+  }
+  .cfb {
+    max-width: 100%;
+  }
+  .cfb-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+  .contact-avatar-ring {
+    width: 190px;
+    height: 190px;
+  }
+  .contact-signature {
+    width: 160px;
+  }
 }

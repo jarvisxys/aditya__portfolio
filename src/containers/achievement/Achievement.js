@@ -91,12 +91,12 @@ export default function Achievement() {
                     </div>
                   </div>
                   <div className="cert-info">
-                    <p className={isDark ? "dark-mode cert-title" : "cert-title"}>
+                    <p
+                      className={isDark ? "dark-mode cert-title" : "cert-title"}
+                    >
                       {cert.title}
                     </p>
-                    {cert.tag && (
-                      <span className="cert-tag">{cert.tag}</span>
-                    )}
+                    {cert.tag && <span className="cert-tag">{cert.tag}</span>}
                   </div>
                 </div>
               ))}
